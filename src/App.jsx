@@ -5,6 +5,7 @@ import Services from "./component/services";
 import About from "./component/about";
 import WorkingStp from "./component/WorkingStp";
 import Pricing from "./component/Pricing";
+import Testimonial from "./component/Testimonial";
 const App = () => {
   return (
     <div className="font-primary  ">
@@ -14,6 +15,7 @@ const App = () => {
       <About/>
       <WorkingStp/>
       <Pricing/>
+      <Testimonial/>
     </div>
   );
 };
