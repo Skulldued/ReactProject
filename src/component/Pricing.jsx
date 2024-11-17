@@ -3,11 +3,11 @@ import PricingCard from "./PricingCard";
 
 const Pricing = () => {
   return (
-    <div className="w-full bg-[#f7f8fc] pb-10 py-10 md:py-16  px-10">
+    <div className="w-full bg-[#f7f8fc] pb-10 py-10 md:py-16 px-4  md:px-10">
       <div className="container mx-auto">
         <div className="flex justify-center ">
           <div className="text-center w-[70%]">
-            <h2 className="text-4xl font-extrabold">
+            <h2 className="md:text-4xl text-2xl font-extrabold">
               Perfect For small & Large Brands
             </h2>
             <p className="p-2">
