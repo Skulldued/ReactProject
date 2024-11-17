@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage:{
+         "working-Image" : "url('./src/assets/work-proceess.webp')"
+      },
       fontFamily:{
        "primary" : ["Philosopher", "sans-serif"],
        "secondary": [ "Montserrat", "sans-serif"]

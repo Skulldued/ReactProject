@@ -1,13 +1,17 @@
 import React from "react";
 import Navbar from "./component/Navbar";
 import Hero from "./component/Hero";
-import Services from "./component/Services";
+import Services from "./component/services";
+import About from "./component/about";
+import WorkingStp from "./component/WorkingStp";
 const App = () => {
   return (
-    <div className="font-primary overflow-x-hidden ">
+    <div className="font-primary  ">
       <Navbar />
       <Hero />
-      <Services/>
+    <Services/>
+      <About/>
+      <WorkingStp/>
     </div>
   );
 };
