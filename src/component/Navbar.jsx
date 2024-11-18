@@ -5,6 +5,7 @@ import { navLink } from "../constant/constant";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import ClearOutlinedIcon from "@mui/icons-material/ClearOutlined";
 import { motion } from "motion/react";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("Home");
@@ -15,7 +16,7 @@ const Navbar = () => {
           <Link to="/">
             <motion.img
               src={Logo}
-              initial={{ transform: "translateY(-80px)" }}
+              initial={{ transform: "translateY(80px)" }}
               animate={{ transform: "translateY(0px)" }}
               transition={{ type: "spring" }}
               className="md:w-[150px] w-[100px]"
@@ -55,7 +56,7 @@ const Navbar = () => {
           }
         >
           {navLink.map((items, index) => (
-            <motion.div className="" key={index}>
+            <div className="" key={index}>
               <Link
                 className={`list-none  font-primary ${
                   activeSection === items.title ? "text-red-600" : ""
@@ -65,7 +66,7 @@ const Navbar = () => {
               >
                 {items.title}
               </Link>
-            </motion.div>
+            </div>
           ))}
           <div>
             <button className="bg-buttonBg text-white px-2  md:hidden py-1 rounded-md">
@@ -74,11 +75,15 @@ const Navbar = () => {
           </div>
         </div>
         {/* Contact us */}
-        <div>
+        <motion.div
+          initial={{ transform: "translateY(80px)" }}
+          animate={{ transform: "translateY(0px)" }}
+          transition={{ type: "spring" }}
+        >
           <button className="bg-buttonBg text-white px-2 hidden md:flex py-1 rounded-md">
             Contact Us
           </button>
-        </div>
+        </motion.div>
       </div>
     </nav>
   );

@@ -19,7 +19,7 @@ const WorkingStp = () => {
           </div>
         </div>
         <div className="flex justify-center  md:py-6 py-2">
-          <div className="flex md:flex-row flex-col gap-12">
+          <div className="flex md:flex-row flex-wrap flex-col gap-12">
             <Card
               id="1"
               title="Fill a Form"

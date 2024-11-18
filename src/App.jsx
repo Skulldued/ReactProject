@@ -7,6 +7,8 @@ import WorkingStp from "./component/WorkingStp";
 import Pricing from "./component/Pricing";
 import Testimonial from "./component/Testimonial";
 import Appointment from "./component/Appointment";
+import Footer from "./component/Footer";
+
 const App = () => {
   return (
     <div className="font-primary  ">
@@ -18,6 +20,7 @@ const App = () => {
       <Pricing/>
       <Testimonial/>
       <Appointment/>
+      <Footer/>
     </div>
   );
 };

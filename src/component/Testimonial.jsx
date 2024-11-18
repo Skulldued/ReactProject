@@ -1,6 +1,8 @@
 import React from 'react'
 import { Testi } from '../constant/constant'
 import FormatQuoteOutlinedIcon from '@mui/icons-material/FormatQuoteOutlined';
+import { motion } from "motion/react";
+import { fadeIn } from "../utils/variant";
 const Testimonial = () => {
   return (
     <div className='w-full bg-[#f7f8fc] py-12'>
@@ -13,7 +15,13 @@ const Testimonial = () => {
           <div className='flex md:flex-row flex-col  gap-10 px-5'>
             {
                Testi.map((items,index)=>(
-                <div className='lg:w-[500px] border-2 relative rounded-sm shadow-sm p-8' key={index}>
+                <motion.div
+                 className='lg:w-[500px] border-2 relative rounded-sm shadow-sm p-8'
+                 variants={fadeIn("left", 0.3)}
+                 initial="hidden"
+                 whileInView={"show"}
+                 viewport={{ once: false, amount: 0.7 }}
+                  key={index}>
                   <div>
                      <div>
                         <FormatQuoteOutlinedIcon 
@@ -35,7 +43,7 @@ const Testimonial = () => {
                        </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
                ))
             }
           </div>
