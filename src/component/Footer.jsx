@@ -13,8 +13,8 @@ import { fadeIn } from "../utils/variant";
 const Footer = () => {
   return (
     <div className="bg-[#f7f8fc] p-6 md:py-14">
-      <div className="container mx-auto  ">
-        <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 lg:space-y-0 space-y-5">
+      <div className="container mx-auto px-10 lg:px-32  grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 lg:space-y-0 space-y-5">
+       
           <motion.div 
            variants={fadeIn("up", 0.3)}
            initial="hidden"
@@ -24,7 +24,7 @@ const Footer = () => {
               <img src={Logo} alt="logo-Footer" />
               <span className="font-bold text-xl">Mindleap</span>
             </Link>
-            <p className="text-start py-2">
+            <p className="text-start p-2">
               Lorem ipsum ipsum dolor sit amet. ipsum dolor sit amet.ipsum dolor
               sit amet.ipsum dolor sit amet.
             </p>
@@ -102,7 +102,7 @@ const Footer = () => {
           </motion.div>
         </div>
       </div>
-    </div>
+    
   );
 };
 

@@ -12,7 +12,7 @@ const Services = () => {
   return (
     <Element name="Services" >
       <div className="bg-[#f7f8fc] w-full">
-      <div className="py-20 px-5 container mx-auto">
+      <div className="lg:py-16 py-10 px-5 container mx-auto">
         <div className="text-center"></div>
         <Tabs className="md:px-10 ">
           <TabList

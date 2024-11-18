@@ -10,7 +10,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("Home");
   return (
-    <nav className="bg-heroBg py-3  text-white px-5 fixed top-0 right-0 left-0 z-10 w-100">
+    <nav className="bg-heroBg py-5  text-white px-5 md:px-20 fixed top-0 right-0 left-0 z-10 w-100">
       <div className="container mx-auto  flex justify-between md:justify-between items-center h-full">
         <div>
           <ScrollLink to="Home" smooth={true} duration={500}>
