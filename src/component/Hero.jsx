@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { fadeIn } from "../utils/variant";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
+import { Element } from "react-scroll";
 const Hero = () => {
   return (
-    <section className="text-white pt-20 bg-heroBg  flex md:h-screen items-center md:flex-row flex-col">
+    <Element name="Home">
+      <section className="text-white pt-20 overflow-y-hidden bg-heroBg  flex md:h-screen items-center md:flex-row flex-col">
       <div className="flex items-center flex-col md:flex-row container    mx-auto justify-center gap-10 p-8">
         {/* Left side */}
         <motion.div
@@ -34,23 +36,21 @@ const Hero = () => {
           </button>
         </motion.div>
         {/* right side */}
-        <motion.div
+        <div
           className=" w-2/3 md:w-1/3 lg:w-1/2 flex md:justify-end "
-          variants={fadeIn("left", 0.2)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
+         
         >
           <div>
             <img
               src={Img}
-              className="w-full object-cover md:w-[380px]"
+              className="w-full object-cover md:w-[250px] lg:w-[360px]"
               alt=""
             />
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
+    </Element>
   );
 };
 

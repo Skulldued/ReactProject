@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../../public/logo.svg";
-import { Link } from "react-router-dom";
+import { Link as ScrollLink, Element } from "react-scroll";
 import { navLink } from "../constant/constant";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import ClearOutlinedIcon from "@mui/icons-material/ClearOutlined";
@@ -10,10 +10,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("Home");
   return (
-    <nav className="bg-heroBg py-3 text-white px-5 fixed top-0 right-0 left-0 z-10 w-100">
+    <nav className="bg-heroBg py-3  text-white px-5 fixed top-0 right-0 left-0 z-10 w-100">
       <div className="container mx-auto  flex justify-between md:justify-between items-center h-full">
         <div>
-          <Link to="/">
+          <ScrollLink to="Home" smooth={true} duration={500}>
             <motion.img
               src={Logo}
               initial={{ transform: "translateY(80px)" }}
@@ -22,7 +22,7 @@ const Navbar = () => {
               className="md:w-[150px] w-[100px]"
               alt="logo"
             />
-          </Link>
+          </ScrollLink>
         </div>
         <div
           className="md:hidden flex justify-end w-full"
@@ -35,15 +35,17 @@ const Navbar = () => {
         <div className="md:flex md:flex-row hidden">
           {navLink.map((items, index) => (
             <div className="" key={index}>
-              <Link
-                className={`list-none md:px-2 font-primary ${
+              <ScrollLink
+                className={`list-none md:px-2 cursor-pointer font-primary ${
                   activeSection === items.title ? "text-red-600" : ""
                 }`}
                 to={items.title}
+                smooth={true} // Enables smooth scrolling
+                duration={500} // Sets the scrolling animation duration
                 onClick={() => setActiveSection(items.title)}
               >
                 {items.title}
-              </Link>
+              </ScrollLink>
             </div>
           ))}
         </div>
@@ -57,15 +59,17 @@ const Navbar = () => {
         >
           {navLink.map((items, index) => (
             <div className="" key={index}>
-              <Link
-                className={`list-none  font-primary ${
+              <ScrollLink
+                className={`list-none  font-primary cursor-pointer ${
                   activeSection === items.title ? "text-red-600" : ""
                 }`}
                 to={items.title}
+                smooth={true} // Enables smooth scrolling
+                duration={500} // Sets the scrolling animation duration
                 onClick={() => setActiveSection(items.title)}
               >
                 {items.title}
-              </Link>
+              </ScrollLink>
             </div>
           ))}
           <div>

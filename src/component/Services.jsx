@@ -7,9 +7,11 @@ import Service13 from "../assets/service3.webp";
 import Service14 from "../assets/service4.webp";
 import { motion } from "motion/react";
 import { fadeIn } from "../utils/variant";
+import { Element } from "react-scroll";
 const Services = () => {
   return (
-    <div className="bg-[#f7f8fc] w-full">
+    <Element name="Services" >
+      <div className="bg-[#f7f8fc] w-full">
       <div className="py-20 px-5 container mx-auto">
         <div className="text-center"></div>
         <Tabs className="md:px-10 ">
@@ -180,6 +182,7 @@ const Services = () => {
         </Tabs>
       </div>
     </div>
+    </Element>
   );
 };
 

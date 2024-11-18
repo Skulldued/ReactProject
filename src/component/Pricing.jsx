@@ -2,9 +2,11 @@ import React from "react";
 import PricingCard from "./PricingCard";
 import { motion } from "motion/react";
 import { fadeIn } from "../utils/variant";
+import { Element } from "react-scroll";
 const Pricing = () => {
   return (
-    <div className="w-full bg-[#f7f8fc] pb-10 py-10 md:py-16 px-4  md:px-10">
+    <Element name="Pricing">
+      <div className="w-full bg-[#f7f8fc] pb-10 py-10 md:py-16 px-4  md:px-10">
       <div className="container mx-auto">
         <motion.div
           className="flex justify-center "
@@ -60,6 +62,7 @@ const Pricing = () => {
         </div>
       </div>
     </div>
+    </Element>
   );
 };
 

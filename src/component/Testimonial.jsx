@@ -3,9 +3,11 @@ import { Testi } from '../constant/constant'
 import FormatQuoteOutlinedIcon from '@mui/icons-material/FormatQuoteOutlined';
 import { motion } from "motion/react";
 import { fadeIn } from "../utils/variant";
+import { Element } from 'react-scroll';
 const Testimonial = () => {
   return (
-    <div className='w-full bg-[#f7f8fc] py-12'>
+    <Element name='Testimonials'>
+      <div className='w-full bg-[#f7f8fc] py-12'>
       <div className='container mx-auto'>
           <div className='px-10'>
             <h2 className='font-bold text-2xl text-center'>What Our Clients Say</h2>
@@ -15,12 +17,9 @@ const Testimonial = () => {
           <div className='flex md:flex-row flex-col  gap-10 px-5'>
             {
                Testi.map((items,index)=>(
-                <motion.div
+                <div
                  className='lg:w-[500px] border-2 relative rounded-sm shadow-sm p-8'
-                 variants={fadeIn("left", 0.3)}
-                 initial="hidden"
-                 whileInView={"show"}
-                 viewport={{ once: false, amount: 0.7 }}
+                
                   key={index}>
                   <div>
                      <div>
@@ -43,13 +42,14 @@ const Testimonial = () => {
                        </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
                ))
             }
           </div>
           </div>
       </div>
     </div>
+    </Element>
   )
 }
 
